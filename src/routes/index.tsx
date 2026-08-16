@@ -137,7 +137,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-          <a href="#top" className="font-display text-sm font-600 uppercase tracking-[0.18em]">
+          <a href="#top" className="font-display text-sm font-semibold uppercase tracking-[0.18em]">
             Home Vision <span className="text-muted-foreground">Models</span>
           </a>
           <nav className="hidden items-center gap-7 md:flex">
@@ -420,7 +420,7 @@ function Index() {
         <section id="contact" className="bg-charcoal text-primary-foreground">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:py-24">
             <div>
-              <p className="font-display text-xs font-600 uppercase tracking-[0.22em] opacity-60">
+              <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] opacity-60">
                 Contact
               </p>
               <h2 className="mt-4 text-3xl sm:text-4xl">Request a quote</h2>
