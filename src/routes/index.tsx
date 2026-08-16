@@ -64,12 +64,14 @@ const packages = [
   {
     name: "Concept",
     scale: "1:100 scale",
+    priceFrom: "from $690",
     body: "A clean massing model of the home with a fixed roof and site base. Ideal for early client conversations and quick approvals.",
-    items: ["Exterior detail & openings", "Mounted display base", "Single dwelling", "2-3 week turnaround"],
+    items: ["Exterior detail & openings", "Mounted display base", "Single dwelling", "2–3 week turnaround"],
   },
   {
     name: "Signature",
     scale: "1:75 scale",
+    priceFrom: "from $1,290",
     body: "Our most popular build. Removable roof reveals the full floor plan, internal walls and room proportions at a glance.",
     items: [
       "Removable roof section",
@@ -82,6 +84,7 @@ const packages = [
   {
     name: "Estate",
     scale: "1:50 & custom",
+    priceFrom: "from $2,900",
     body: "Multi-dwelling and display village models for developers, land estates and sales suites, built to your masterplan.",
     items: ["Multiple dwellings & streetscape", "Lot numbering & signage", "Vehicles and landscaping", "Custom cabinetry & cases"],
   },
@@ -339,18 +342,29 @@ function Index() {
         {/* Packages */}
         <section id="packages" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-24">
-            <p className="eyebrow">Models &amp; packages</p>
+            <p className="eyebrow">Models & packages</p>
             <h2 className="mt-4 text-3xl sm:text-4xl">Built to the level of detail you need</h2>
+            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+              Three tiers, each a complete finished model — not a deposit or a rendering. Prices
+              below are starting points for a standard single-dwelling home; final quotes depend on
+              footprint, level of detail and quantity. All prices are in Australian dollars and
+              include GST.
+            </p>
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {packages.map((pkg) => (
                 <article
                   key={pkg.name}
                   className={
                     pkg.featured
-                      ? "flex flex-col bg-charcoal p-8 text-primary-foreground"
-                      : "flex flex-col border border-border p-8"
+                      ? "relative flex flex-col bg-charcoal p-8 text-primary-foreground"
+                      : "relative flex flex-col border border-border p-8"
                   }
                 >
+                  {pkg.featured && (
+                    <span className="absolute right-6 top-6 text-[0.65rem] uppercase tracking-[0.2em] opacity-60">
+                      Most popular
+                    </span>
+                  )}
                   <h3 className="text-2xl">{pkg.name}</h3>
                   <p
                     className={
@@ -361,30 +375,55 @@ function Index() {
                   >
                     {pkg.scale}
                   </p>
+                  <div className="mt-6 flex items-baseline gap-2">
+                    <span
+                      className={
+                        pkg.featured
+                          ? "font-display text-3xl"
+                          : "font-display text-3xl text-charcoal"
+                      }
+                    >
+                      {pkg.priceFrom}
+                    </span>
+                    <span className={pkg.featured ? "text-xs opacity-60" : "text-xs text-muted-foreground"}>
+                      inc. GST
+                    </span>
+                  </div>
                   <p className={pkg.featured ? "mt-5 text-sm leading-relaxed opacity-85" : "mt-5 text-sm leading-relaxed text-muted-foreground"}>
                     {pkg.body}
                   </p>
-                  <ul className="mt-6 space-y-2 text-sm">
+                  <ul className="mt-6 space-y-2.5 text-sm">
                     {pkg.items.map((item) => (
                       <li key={item} className="flex gap-3">
-                        <span className={pkg.featured ? "opacity-60" : "text-muted-foreground"}>—</span>
+                        <span className={pkg.featured ? "opacity-60" : "text-muted-foreground"}>
+                          ✓
+                        </span>
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#contact"
-                    className={
-                      pkg.featured
-                        ? "mt-8 border border-primary-foreground/40 px-5 py-3 text-center text-xs uppercase tracking-[0.16em] transition-colors hover:bg-primary-foreground hover:text-charcoal"
-                        : "mt-8 border border-border px-5 py-3 text-center text-xs uppercase tracking-[0.16em] transition-colors hover:bg-secondary"
-                    }
-                  >
-                    Enquire
-                  </a>
+                  <div className="mt-auto">
+                    <a
+                      href="#contact"
+                      className={
+                        pkg.featured
+                          ? "mt-8 block border border-primary-foreground/40 px-5 py-3 text-center text-xs uppercase tracking-[0.16em] transition-colors hover:bg-primary-foreground hover:text-charcoal"
+                          : "mt-8 block border border-border px-5 py-3 text-center text-xs uppercase tracking-[0.16em] transition-colors hover:bg-secondary"
+                      }
+                    >
+                      Request a quote
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
+            <p className="mt-8 text-xs text-muted-foreground">
+              Multi-model and portfolio orders qualify for volume pricing —{" "}
+              <a href="#contact" className="underline underline-offset-4 hover:text-foreground">
+                ask for a set quote
+              </a>
+              .
+            </p>
           </div>
         </section>
 
