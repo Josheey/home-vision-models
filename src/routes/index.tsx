@@ -64,12 +64,14 @@ const packages = [
   {
     name: "Concept",
     scale: "1:100 scale",
+    priceFrom: "from $690",
     body: "A clean massing model of the home with a fixed roof and site base. Ideal for early client conversations and quick approvals.",
-    items: ["Exterior detail & openings", "Mounted display base", "Single dwelling", "2-3 week turnaround"],
+    items: ["Exterior detail & openings", "Mounted display base", "Single dwelling", "2–3 week turnaround"],
   },
   {
     name: "Signature",
     scale: "1:75 scale",
+    priceFrom: "from $1,290",
     body: "Our most popular build. Removable roof reveals the full floor plan, internal walls and room proportions at a glance.",
     items: [
       "Removable roof section",
@@ -82,6 +84,7 @@ const packages = [
   {
     name: "Estate",
     scale: "1:50 & custom",
+    priceFrom: "from $2,900",
     body: "Multi-dwelling and display village models for developers, land estates and sales suites, built to your masterplan.",
     items: ["Multiple dwellings & streetscape", "Lot numbering & signage", "Vehicles and landscaping", "Custom cabinetry & cases"],
   },
