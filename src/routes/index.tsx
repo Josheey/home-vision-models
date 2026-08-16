@@ -247,23 +247,74 @@ function Index() {
         <section id="builders" className="border-b border-border bg-secondary">
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-24">
             <p className="eyebrow">Builder solutions</p>
-            <h2 className="mt-4 max-w-2xl text-3xl sm:text-4xl">
-              A sales tool that sits on the table and closes the gap
+            <h2 className="mt-4 max-w-3xl text-3xl sm:text-4xl">
+              One model impresses a client. A full range wins the contract.
             </h2>
-            <div className="mt-12 grid gap-px sm:grid-cols-2 lg:grid-cols-3">
+            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+              Builders who commission a set of models for their whole portfolio don't just
+              walk clients through a single design — they let families compare layouts side
+              by side, upsell on the spot, and leave the sales suite certain of their choice.
+              The more designs you have on the table, the more likely a visitor finds their
+              home.
+            </p>
+
+            <div className="mt-14 border border-border bg-background">
+              <div className="grid gap-px sm:grid-cols-3">
+                {[
+                  ["Walk every buyer into their home", "With your full range on display, clients compare single and double-storey options, facades and floor plans in minutes — and commit sooner."],
+                  ["Upsell at the model, not the brochure", "Premium inclusions and upgraded layouts are obvious when buyers can lift a roof and see the space. Higher-margin options sell themselves."],
+                  ["A display suite that sells itself", "A row of finished models turns an empty room into a destination. Visitors stay longer, bring family back, and refer friends."],
+                ].map(([title, body]) => (
+                  <div key={title} className="p-7">
+                    <h3 className="text-lg">{title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12 grid gap-px sm:grid-cols-2 lg:grid-cols-4">
               {[
-                ["Display home centrepiece", "A model of your most popular design on the reception desk gives walk-ins something to hold and remember."],
-                ["Faster plan approvals", "Clients sign off sooner when they can see room proportions instead of interpreting dimensions on paper."],
-                ["Fewer costly variations", "Layout concerns surface at the model, not mid-build, reducing change orders and delays."],
-                ["Land estate & display villages", "Masterplan models with streetscapes, lot numbering and landscaping for sales suites."],
-                ["Home show & expo pieces", "Portable, cased models built to draw a crowd at trade shows and open days."],
-                ["Client handover gifts", "A finished miniature of the completed home — a keepsake that keeps referrals coming."],
+                ["Display-home centrepiece", "Your hero design on the reception desk gives walk-ins something to hold and remember."],
+                ["Estate & streetscape sets", "Masterplan models with lot numbering and landscaping for sales suites and display villages."],
+                ["Trade-show & expo kits", "Portable, cased models built to draw a crowd at home shows and open days."],
+                ["Handover keepsakes", "A finished miniature of the completed home — a gift that keeps referrals coming."],
               ].map(([title, body]) => (
                 <article key={title} className="bg-background p-7">
-                  <h3 className="text-lg">{title}</h3>
+                  <h3 className="text-base">{title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-12 grid border border-charcoal bg-charcoal text-primary-foreground lg:grid-cols-[1.4fr_1fr]">
+              <div className="p-8 sm:p-10">
+                <h3 className="text-2xl sm:text-3xl">Order your whole range at once</h3>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed opacity-85">
+                  Commissioning a full set in one run keeps scales, materials and finish
+                  consistent across every display — and unlocks volume pricing. Bring us
+                  your range of designs and we'll build a coherent collection that travels
+                  together from sales suite to handover.
+                </p>
+              </div>
+              <div className="flex flex-col justify-center gap-4 border-t border-primary-foreground/15 p-8 sm:p-10 lg:border-l lg:border-t-0">
+                {[
+                  "Consistent scale & finish across your portfolio",
+                  "Volume pricing on sets of 3 or more",
+                  "Priority build slot & dedicated production run",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-sm">
+                    <span className="opacity-60">—</span>
+                    <span className="opacity-90">{item}</span>
+                  </div>
+                ))}
+                <a
+                  href="#contact"
+                  className="mt-2 inline-block w-fit border border-primary-foreground/40 px-5 py-3 text-center text-xs uppercase tracking-[0.16em] transition-colors hover:bg-primary-foreground hover:text-charcoal"
+                >
+                  Request a portfolio quote
+                </a>
+              </div>
             </div>
           </div>
         </section>
