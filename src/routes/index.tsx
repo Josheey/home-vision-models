@@ -319,10 +319,39 @@ function Index() {
                 </a>
               </div>
             </div>
+
+            <div className="mt-16 border-t-2 border-charcoal bg-background">
+              <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 py-14 text-center sm:py-16">
+                <p className="eyebrow">For residential builders</p>
+                <h3 className="max-w-3xl text-3xl leading-tight sm:text-4xl lg:text-5xl">
+                  Put your whole range on the table. Start with a single quote.
+                </h3>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Tell us how many designs you're selling and we'll build a tailored proposal —
+                  with volume pricing, consistent scales and a priority build slot. No obligation,
+                  no deposit; just a clear plan to get your homes in front of buyers.
+                </p>
+                <div className="flex flex-col items-center gap-3 sm:flex-row">
+                  <a
+                    href="#contact"
+                    className="inline-block bg-charcoal px-8 py-4 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-charcoal/85"
+                  >
+                    Request your builder quote
+                  </a>
+                  <a
+                    href="mailto:sales@homevisionmodels.com"
+                    className="inline-block px-2 py-4 text-xs uppercase tracking-[0.18em] underline underline-offset-4 hover:text-foreground"
+                  >
+                    or email sales@homevisionmodels.com
+                  </a>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Typical reply within one business day · Freight Australia-wide
+                </p>
+              </div>
+            </div>
           </div>
         </section>
-
-        {/* How it works */}
         <section id="process" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-24">
             <p className="eyebrow">How it works</p>
